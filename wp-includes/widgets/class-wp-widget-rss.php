@@ -43,7 +43,6 @@ class WP_Widget_RSS extends WP_Widget {
 	 * @param array $instance Settings for the current RSS widget instance.
 	 */
 	public function widget( $args, $instance ) {
-        return;
 		if ( isset( $instance['error'] ) && $instance['error'] ) {
 			return;
 		}
