@@ -1,6 +1,4 @@
 <header role="banner" id="header" style="background-image:url('<?php header_image(); ?>');">
-<script data-ad-client="ca-pub-6387872276467622" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
 	<div id="branding">
 
 		<?php if( current_theme_supports( 'custom-logo' ) ) the_custom_logo(); // custom logo ?>
@@ -20,5 +18,6 @@
 	</div><!-- #branding -->
 
 	<?php get_template_part( 'menu/social-links' ); ?>
+<script data-ad-client="ca-pub-6387872276467622" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 </header><!-- #header-->
