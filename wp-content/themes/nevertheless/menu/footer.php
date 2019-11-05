@@ -14,7 +14,7 @@
 					'menu_class'      => 'menu-items',
 					'depth'           => 1,
 					'fallback_cb'     => 'tamatebako_menu_footer_fallback_cb',
-					'items_wrap'      => '<div class="wrap"><ul id="%s" class="%s">' . $copy . '%s </ul></div>'
+					'items_wrap'      => '<div style="text-align: center;"><ul id="%s" class="%s">' . $copy . '%s </ul></div>'
 				)
 			);
 		}
