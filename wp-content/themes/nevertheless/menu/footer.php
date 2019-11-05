@@ -14,7 +14,7 @@
 					'menu_class'      => 'menu-items',
 					'depth'           => 1,
 					'fallback_cb'     => 'tamatebako_menu_footer_fallback_cb',
-					'items_wrap'      => '<div class="wrap"><ul id="%s" class="%s">' . $copy . '%s "京ICP备19040792号"</ul></div>'
+					'items_wrap'      => '<div class="wrap"><ul id="%s" class="%s">' . $copy . '%s </ul>"京ICP备19040792号"</div>'
 				)
 			);
 		}
