@@ -7,7 +7,7 @@
 </head>
 <body>
     <!-- 中部框架 -->
-    <div class="qy-mod-list qy-mod-list-wrap qy-mod-list-vt">
+    <div class="qy-mod-list qy-mod-list-wrap">
         <ul class="qy-mod-ul qy-mod-ul-collect">
             <!-- begin php -->
 <?php
