@@ -17,14 +17,16 @@ if (!$select_db) {
 }
 
 $sql = "select * from hhy_vip_video;";
-$res = $mysqli->query($sql);
-if (!$res) {
-    die("sql error:\n" . $mysqli->error);
+if ($result = $mysqli->query($sql)) {
+    /* fetch associative array */
+    while ($row = $result->fetch_assoc()) {
+        printf ("%s (%s)\n", $row["Name"], $row["CountryCode"]);
+    }
+    /* free result set */
+    $result->free();
 }
 
-$result = $res -> fetch_assoc();
-echo json_encode($result) ;
-$res->free();
+//echo json_encode($result) ;
 $mysqli->close();
 ?>
  
