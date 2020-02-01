@@ -54,7 +54,7 @@ if ($result = $mysqli->query($sql)) {
         echo "  <div class=\"qy-mod-img vertical\">";
         echo         "<div class=\"qy-mod-link-wrap\">";
         echo            "<a href=\"https://www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1\" title=\"".$vv->video_title."\" rseat=\"80521_like_image1\" target=\"_blank\" class=\"qy-mod-link\">";
-         echo                  "<img rseat=\"80521_like_image1\" src=\"https://pic2.iqiyipic.com/image/20190903/2a/50/v_109509036_m_601_m4_260_360.jpg\" data-pb=\"c1=1\" class=\"qy-mod-cover fadeOutIn-enter-active\">";
+         echo                  "<img rseat=\"80521_like_image1\" src=\"".$vv->cover_img."\" data-pb=\"c1=1\" class=\"qy-mod-cover fadeOutIn-enter-active\">";
          echo "</a>";
                 echo "</div>";
                     echo "<div title=\"".$vv->video_title."\" class=\"title-wrap\">";
@@ -62,7 +62,7 @@ if ($result = $mysqli->query($sql)) {
                             echo "<a rseat=\"80521_like_title1\" href=\"//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1\" title=\"".$vv->video_title."\" target=\"_blank\" data-pb=\"c1=1\" class=\"link-txt\">".$vv->video_title."";
                             echo "</a>";
                         echo "</p>";
-                        echo "<p title=\"一路奔跑只为重生\" class=\"sub\">一路奔跑只为重生";
+                        echo "<p title=\"".$vv->video_desc."\" class=\"sub\">".$vv->video_desc."";
                         echo "</p>";
                     echo "</div>";
                 echo "</div>";
@@ -77,168 +77,7 @@ if ($result = $mysqli->query($sql)) {
 //echo json_encode($result) ;
 $mysqli->close();
 ?>
-
-
-
-
-            <li class="qy-mod-li" index="1">
-                <div class="qy-mod-img vertical">
-                    <div class="qy-mod-link-wrap">
-                        <a href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1" title="灭绝：丧尸屠城" rseat="80521_like_image1" target="_blank" class="qy-mod-link">
-                            <img rseat="80521_like_image1" src="https://pic2.iqiyipic.com/image/20190903/2a/50/v_109509036_m_601_m4_260_360.jpg" data-pb="c1=1" class="qy-mod-cover fadeOutIn-enter-active">
-                        </a>
-                    </div>
-                    <div title="灭绝：丧尸屠城" class="title-wrap">
-                        <p class="main">
-                            <a rseat="80521_like_title1" href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1" title="灭绝：丧尸屠城" target="_blank" data-pb="c1=1" class="link-txt">灭绝：丧尸屠城
-                            </a>
-                        </p>
-                        <p title="一路奔跑只为重生" class="sub">一路奔跑只为重生
-                        </p>
-                    </div>
-                </div><!---->
-            </li>
-                <li class="qy-mod-li" index="1">
-                <div class="qy-mod-img vertical">
-                    <div class="qy-mod-link-wrap">
-                        <a href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1" title="灭绝：丧尸屠城" rseat="80521_like_image1" target="_blank" class="qy-mod-link">
-                            <img rseat="80521_like_image1" src="https://pic2.iqiyipic.com/image/20190903/2a/50/v_109509036_m_601_m4_260_360.jpg" data-pb="c1=1" class="qy-mod-cover fadeOutIn-enter-active">
-                        </a>
-                    </div>
-                    <div title="灭绝：丧尸屠城" class="title-wrap">
-                        <p class="main">
-                            <a rseat="80521_like_title1" href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1" title="灭绝：丧尸屠城" target="_blank" data-pb="c1=1" class="link-txt">灭绝：丧尸屠城
-                            </a>
-                        </p>
-                        <p title="一路奔跑只为重生" class="sub">一路奔跑只为重生
-                        </p>
-                    </div>
-                </div><!---->
-            </li>
-                <li class="qy-mod-li" index="1">
-                <div class="qy-mod-img vertical">
-                    <div class="qy-mod-link-wrap">
-                        <a href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1" title="灭绝：丧尸屠城" rseat="80521_like_image1" target="_blank" class="qy-mod-link">
-                            <img rseat="80521_like_image1" src="https://pic2.iqiyipic.com/image/20190903/2a/50/v_109509036_m_601_m4_260_360.jpg" data-pb="c1=1" class="qy-mod-cover fadeOutIn-enter-active">
-                        </a>
-                    </div>
-                    <div title="灭绝：丧尸屠城" class="title-wrap">
-                        <p class="main">
-                            <a rseat="80521_like_title1" href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1" title="灭绝：丧尸屠城" target="_blank" data-pb="c1=1" class="link-txt">灭绝：丧尸屠城
-                            </a>
-                        </p>
-                        <p title="一路奔跑只为重生" class="sub">一路奔跑只为重生
-                        </p>
-                    </div>
-                </div><!---->
-            </li>
-
-                <li class="qy-mod-li" index="1">
-                <div class="qy-mod-img vertical">
-                    <div class="qy-mod-link-wrap">
-                        <a href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1" title="灭绝：丧尸屠城" rseat="80521_like_image1" target="_blank" class="qy-mod-link">
-                            <img rseat="80521_like_image1" src="https://pic2.iqiyipic.com/image/20190903/2a/50/v_109509036_m_601_m4_260_360.jpg" data-pb="c1=1" class="qy-mod-cover fadeOutIn-enter-active">
-                        </a>
-                    </div>
-                    <div title="灭绝：丧尸屠城" class="title-wrap">
-                        <p class="main">
-                            <a rseat="80521_like_title1" href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1" title="灭绝：丧尸屠城" target="_blank" data-pb="c1=1" class="link-txt">灭绝：丧尸屠城
-                            </a>
-                        </p>
-                        <p title="一路奔跑只为重生" class="sub">一路奔跑只为重生
-                        </p>
-                    </div>
-                </div><!---->
-            </li>
-
-                <li class="qy-mod-li" index="1">
-                <div class="qy-mod-img vertical">
-                    <div class="qy-mod-link-wrap">
-                        <a href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1" title="灭绝：丧尸屠城" rseat="80521_like_image1" target="_blank" class="qy-mod-link">
-                            <img rseat="80521_like_image1" src="https://pic2.iqiyipic.com/image/20190903/2a/50/v_109509036_m_601_m4_260_360.jpg" data-pb="c1=1" class="qy-mod-cover fadeOutIn-enter-active">
-                        </a>
-                    </div>
-                    <div title="灭绝：丧尸屠城" class="title-wrap">
-                        <p class="main">
-                            <a rseat="80521_like_title1" href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1" title="灭绝：丧尸屠城" target="_blank" data-pb="c1=1" class="link-txt">灭绝：丧尸屠城
-                            </a>
-                        </p>
-                        <p title="一路奔跑只为重生" class="sub">一路奔跑只为重生
-                        </p>
-                    </div>
-                </div><!---->
-            </li>
-            <li class="qy-mod-li" index="1">
-                <div class="qy-mod-img vertical">
-                    <div class="qy-mod-link-wrap">
-                        <a href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1" title="灭绝：丧尸屠城" rseat="80521_like_image1" target="_blank" class="qy-mod-link">
-                            <img rseat="80521_like_image1" src="https://pic2.iqiyipic.com/image/20190903/2a/50/v_109509036_m_601_m4_260_360.jpg" data-pb="c1=1" class="qy-mod-cover fadeOutIn-enter-active">
-                        </a>
-                    </div>
-                    <div title="灭绝：丧尸屠城" class="title-wrap">
-                        <p class="main">
-                            <a rseat="80521_like_title1" href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1" title="灭绝：丧尸屠城" target="_blank" data-pb="c1=1" class="link-txt">灭绝：丧尸屠城
-                            </a>
-                        </p>
-                        <p title="一路奔跑只为重生" class="sub">一路奔跑只为重生
-                        </p>
-                    </div>
-                </div><!---->
-            </li>
-                <li class="qy-mod-li" index="1">
-                <div class="qy-mod-img vertical">
-                    <div class="qy-mod-link-wrap">
-                        <a href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1" title="灭绝：丧尸屠城" rseat="80521_like_image1" target="_blank" class="qy-mod-link">
-                            <img rseat="80521_like_image1" src="https://pic2.iqiyipic.com/image/20190903/2a/50/v_109509036_m_601_m4_260_360.jpg" data-pb="c1=1" class="qy-mod-cover fadeOutIn-enter-active">
-                        </a>
-                    </div>
-                    <div title="灭绝：丧尸屠城" class="title-wrap">
-                        <p class="main">
-                            <a rseat="80521_like_title1" href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1" title="灭绝：丧尸屠城" target="_blank" data-pb="c1=1" class="link-txt">灭绝：丧尸屠城
-                            </a>
-                        </p>
-                        <p title="一路奔跑只为重生" class="sub">一路奔跑只为重生
-                        </p>
-                    </div>
-                </div><!---->
-            </li>
-
-                <li class="qy-mod-li" index="1">
-                <div class="qy-mod-img vertical">
-                    <div class="qy-mod-link-wrap">
-                        <a href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1" title="灭绝：丧尸屠城" rseat="80521_like_image1" target="_blank" class="qy-mod-link">
-                            <img rseat="80521_like_image1" src="https://pic2.iqiyipic.com/image/20190903/2a/50/v_109509036_m_601_m4_260_360.jpg" data-pb="c1=1" class="qy-mod-cover fadeOutIn-enter-active">
-                        </a>
-                    </div>
-                    <div title="灭绝：丧尸屠城" class="title-wrap">
-                        <p class="main">
-                            <a rseat="80521_like_title1" href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1" title="灭绝：丧尸屠城" target="_blank" data-pb="c1=1" class="link-txt">灭绝：丧尸屠城
-                            </a>
-                        </p>
-                        <p title="一路奔跑只为重生" class="sub">一路奔跑只为重生
-                        </p>
-                    </div>
-                </div><!---->
-            </li>
-
-                <li class="qy-mod-li" index="1">
-                <div class="qy-mod-img vertical">
-                    <div class="qy-mod-link-wrap">
-                        <a href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1" title="灭绝：丧尸屠城" rseat="80521_like_image1" target="_blank" class="qy-mod-link">
-                            <img rseat="80521_like_image1" src="https://pic2.iqiyipic.com/image/20190903/2a/50/v_109509036_m_601_m4_260_360.jpg" data-pb="c1=1" class="qy-mod-cover fadeOutIn-enter-active">
-                        </a>
-                    </div>
-                    <div title="灭绝：丧尸屠城" class="title-wrap">
-                        <p class="main">
-                            <a rseat="80521_like_title1" href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1" title="灭绝：丧尸屠城" target="_blank" data-pb="c1=1" class="link-txt">灭绝：丧尸屠城
-                            </a>
-                        </p>
-                        <p title="一路奔跑只为重生" class="sub">一路奔跑只为重生
-                        </p>
-                    </div>
-                </div><!---->
-            </li>
-        </ul>
+         </ul>
 
 
     </div>
