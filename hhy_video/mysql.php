@@ -48,7 +48,7 @@ if ($result = $mysqli->query($sql)) {
         $vv->video_title=$row["hhy_id"]; //lch debug
         $vv->cover_img=$row["cover_img"];
         $vv->video_desc=$row["video_desc"];
-        $vv->video_url=$row["video_url"];
+        $vv->video_url="http://hehuoya.com/hhy_video/hhy_video_player.php?url=".$row["video_url"];
         $vv->submission_date=$row["submission_date"];
         $arr[]=$vv;
         echo "<li class=\"qy-mod-li\" index=\"1\">";
