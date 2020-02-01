@@ -23,35 +23,7 @@ if (!$res) {
 }
 
 $result = $res -> fetch_assoc();
- echo json_encode($result) ;
-    return ;
-//新建数组
-$arr=array();
-//2.转换为对象，处理数据
-class Vip_Video{
-    public $video_title;
-    public $cover_img;
-    public $video_desc;
-    public $video_url;
-    public $submission_date;
-}
-    
- while ($row = $res->fetch_assoc()) {
-     $vv=new Vip_Video();
-     $vv->video_title=$row->video_title;
-     echo "videotitle=".$row;
-     echo "\n";
-
-     $vv->cover_img=$row->cover_img;
-     $vv->video_desc=$row->video_desc;
-     $vv->video_url=$row->video_url;
-     $vv->submission_date=$row->submission_date;
-     //填充数组
-     $arr[]=$vv;
- }
-//对变量进行json编码
-echo json_encode(array("state"=>"success",'vip_videos'=>$arr));
-
+echo json_encode($result) ;
 $res->free();
 $mysqli->close();
 ?>
