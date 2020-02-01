@@ -6,7 +6,7 @@
 <body>
  
 <?php
-echo GET['url'];
+echo $_GET['url'];
 
    
 ?>
