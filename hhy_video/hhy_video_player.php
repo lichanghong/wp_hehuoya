@@ -12,6 +12,15 @@ $target=$parse.$url;
 echo $target;
    
 ?>
+
+<div style="width:100%;height:100%;">
+    <iframe id="WANG" scrolling="no" allowfullscreen="true" allowtransparency="true" frameborder="0"
+            src="//8090.ylybz.cn/jiexi2019/?url=https://www.iqiyi.com/v_19rrk3rr2w.html"
+            width="100%" height="100%"></iframe>
+    <script type="text/javascript"> function SUIYI(url) {
+            $('#WANG').attr('src', decodeURIComponent(decodeURIComponent(url))).show();
+        } </script>
+</div>
        
 </body>
  
