@@ -1,12 +1,30 @@
 <?php
-$dbhost = '49.233.84.49';  // mysql服务器主机地址
-$dbuser = 'root';            // mysql用户名
-$dbpass = 'lchcl0655';          // mysql用户名密码
-$conn = mysqli_connect($dbhost, $dbuser, $dbpass);
-if(! $conn )
-{
-    die('Could not connect: ' . mysqli_error());
+$mysql_conf = array(
+    'host'    => 'localhost',
+    'db'      => 'hhy_vip_video_db',
+    'db_user' => 'root',
+    'db_pwd'  => 'lchcl0655',
+    );
+
+$mysqli = @new mysqli($mysql_conf['host'], $mysql_conf['db_user'], $mysql_conf['db_pwd']);
+if ($mysqli->connect_errno) {
+    die("could not connect to the database:\n" . $mysqli->connect_error);//诊断连接错误
 }
-echo '数据库连接成功！';
-mysqli_close($conn);
+$mysqli->query("set names 'utf8';");//编码转化
+$select_db = $mysqli->select_db($mysql_conf['db']);
+if (!$select_db) {
+    die("could not connect to the db:\n" .  $mysqli->error);
+}
+
+$sql = "select * from hhy_vip_video;";
+$res = $mysqli->query($sql);
+if (!$res) {
+    die("sql error:\n" . $mysqli->error);
+}
+ while ($row = $res->fetch_assoc()) {
+        var_dump($row);
+    }
+
+$res->free();
+$mysqli->close();
 ?>
