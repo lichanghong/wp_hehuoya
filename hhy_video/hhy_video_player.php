@@ -6,8 +6,10 @@
 <body>
  
 <?php
-echo $_GET['url'];
-
+$parse="http://jx.618g.com/?url=";
+$url=$_GET['url'];
+$target=$parse.$url;
+echo $target;
    
 ?>
        
