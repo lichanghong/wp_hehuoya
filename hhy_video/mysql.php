@@ -54,13 +54,13 @@ if ($result = $mysqli->query($sql)) {
         echo "<li class=\"qy-mod-li\" index=\"1\">";
         echo "  <div class=\"qy-mod-img vertical\">";
         echo         "<div class=\"qy-mod-link-wrap\">";
-        echo            "<a href=\"https://www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1\" title=\"".$vv->video_title."\" rseat=\"80521_like_image1\" target=\"_blank\" class=\"qy-mod-link\">";
+        echo            "<a href=\"".$vv->video_url."\" title=\"".$vv->video_title."\" rseat=\"80521_like_image1\" target=\"_blank\" class=\"qy-mod-link\">";
          echo                  "<img rseat=\"80521_like_image1\" src=\"".$vv->cover_img."\" data-pb=\"c1=1\" class=\"qy-mod-cover fadeOutIn-enter-active\">";
          echo "</a>";
                 echo "</div>";
                     echo "<div title=\"".$vv->video_title."\" class=\"title-wrap\">";
                         echo "<p class=\"main\">";
-                            echo "<a rseat=\"80521_like_title1\" href=\"//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1\" title=\"".$vv->video_title."\" target=\"_blank\" data-pb=\"c1=1\" class=\"link-txt\">".$vv->video_title."";
+                            echo "<a rseat=\"80521_like_title1\" href=\"".$vv->video_url."\" title=\"".$vv->video_title."\" target=\"_blank\" data-pb=\"c1=1\" class=\"link-txt\">".$vv->video_title."";
                             echo "</a>";
                         echo "</p>";
                         echo "<p title=\"".$vv->video_desc."\" class=\"sub\">".$vv->video_desc."";
