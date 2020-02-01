@@ -20,7 +20,7 @@ $sql = "select * from hhy_vip_video;";
 if ($result = $mysqli->query($sql)) {
     /* fetch associative array */
     while ($row = $result->fetch_assoc()) {
-        printf ("%s (%s)\n", $row["Name"], $row["CountryCode"]);
+        printf ("%s (%s)\n", $row["video_title"], $row["cover_img"]);
     }
     /* free result set */
     $result->free();
