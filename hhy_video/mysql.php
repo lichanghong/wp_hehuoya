@@ -22,9 +22,9 @@ if (!$res) {
     die("sql error:\n" . $mysqli->error);
 }
 
-echo "res=".$res;
-echo "\n";
-
+$result = $res -> fetch_assoc();
+ echo json_encode($result) ;
+    return ;
 //新建数组
 $arr=array();
 //2.转换为对象，处理数据
