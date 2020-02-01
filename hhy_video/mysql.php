@@ -36,7 +36,7 @@ class Vip_Video{
  while ($row = $res->fetch_assoc()) {
      $vv=new Vip_Video();
      $vv->video_title=$row->video_title;
-     echo "videotitle="+$row->video_title;
+     echo "videotitle="+$row;
      $vv->cover_img=$row->cover_img;
      $vv->video_desc=$row->video_desc;
      $vv->video_url=$row->video_url;
