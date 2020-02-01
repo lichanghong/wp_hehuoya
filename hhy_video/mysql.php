@@ -21,7 +21,10 @@ $res = $mysqli->query($sql);
 if (!$res) {
     die("sql error:\n" . $mysqli->error);
 }
-    
+
+echo "res=".$res;
+echo "\n";
+
 //新建数组
 $arr=array();
 //2.转换为对象，处理数据
@@ -37,6 +40,8 @@ class Vip_Video{
      $vv=new Vip_Video();
      $vv->video_title=$row->video_title;
      echo "videotitle=".$row;
+     echo "\n";
+
      $vv->cover_img=$row->cover_img;
      $vv->video_desc=$row->video_desc;
      $vv->video_url=$row->video_url;
