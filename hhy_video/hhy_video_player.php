@@ -6,6 +6,8 @@
  <style type="text/css">
 body,html {margin:0; height:100%;}
 </style>
+<script data-ad-client="ca-pub-6387872276467622" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 <body>
  

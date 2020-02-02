@@ -5,6 +5,8 @@
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/playerPopup.css">
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/gaze/uniqy/main/css/playMovie.08c08943.css">
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/barrage.2a919d2f.css">
+    <script data-ad-client="ca-pub-6387872276467622" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
 </head>
 <body>
     <div style="margin-top: 10px;margin-left: 10px">免费全网影视VIP视频！ 若播放异常，刷新</div>
