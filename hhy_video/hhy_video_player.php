@@ -6,7 +6,7 @@
 <body>
  
 <?php
-$parse="http://8090.ylybz.cn/jiexi2019/?url=";
+$parse="https://www.8090g.cn/?url=";
 $url=$_GET['url'];
 $target=$parse.$url;
     echo '<div style="width:100%;height:100%;">';
@@ -16,10 +16,7 @@ $target=$parse.$url;
 echo $target;
    
 ?>
- 
-</div>
-       
+        
 </body>
- 
 </html>
   
