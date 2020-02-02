@@ -7,6 +7,7 @@
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/barrage.2a919d2f.css">
 </head>
 <body>
+    <div>免费全网影视VIP视频！ 若播放异常，刷新</div>
     <!-- 中部框架 -->
     <div class="qy-mod-list qy-mod-list-wrap">
         <ul class="qy-mod-ul qy-mod-ul-collect">
@@ -83,6 +84,7 @@ $mysqli->close();
 
 
     </div>
+    <div>本站所有视频和图片均来自互联网，版权归原创者所有</div>
 </body>
  
 </html>
