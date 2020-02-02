@@ -46,7 +46,7 @@ if ($result = $mysqli->query($sql)) {
     while ($row = $result->fetch_assoc()) {
         $vv=new Vip_Video();
         $vv->video_title=$row["video_title"];
-        $vv->video_title=$row["hhy_id"]; //lch debug
+        // $vv->video_title=$row["hhy_id"]; //lch debug
         $vv->cover_img=$row["cover_img"];
         $vv->video_desc=$row["video_desc"];
         $vv->video_url="http://hehuoya.com/hhy_video/hhy_video_player.php?url=".$row["video_url"];
