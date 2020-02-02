@@ -1,5 +1,6 @@
 #!/usr/local/bin/python3
 # encoding: utf-8
+
 '''
 @author: wenyali
 @contact: 2917073217@qq.com
@@ -12,27 +13,31 @@ from bs4 import BeautifulSoup as bs4
 
 import urllib3
 import requests
-# # 忽略警告：InsecureRequestWarning: Unverified HTTPS request is being made. Adding certificate verification is strongly advised.
-# requests.packages.urllib3.disable_warnings()
-# # 一个PoolManager实例来生成请求, 由该实例对象处理与线程池的连接以及线程安全的所有细节
-# http = urllib3.PoolManager()
-# # 通过request()方法创建一个请求：
-# url = "https://www.iqiyi.com/dianying_new/i_list_zuixinshangxian.html"
-# html_content = http.request('GET', url).data.decode()
-# soup_ccontent = bs4(html_content, 'html.parser')
-#
-# ul_content = soup_ccontent.find("ul", class_="site-piclist")
-# li_content = ul_content.find_all("li")
-#
-# for li in li_content:
-#     content = li.a['href'], "https:"+li.img['src']
-#     print(content)
-#     print(li.a['title'])
-#     print(li.find('p', class_="site-piclist_info_describe").string)
 
-# 数据库的链接
+requests.packages.urllib3.disable_warnings()
+http = urllib3.PoolManager()
+url = "https://www.iqiyi.com/dianying_new/i_list_zuixinshangxian.html"
+html_content = http.request('GET', url).data.decode("utf-8")
+print(html_content)
+soup_content = bs4(html_content, 'html.parser')
+
+print(soup_content)
+ul_content = soup_ccontent.find("ul", class_="site-piclist")
+li_content = ul_content.find_all("li")
+
 import pymysql
-db = pymysql.connect("localhost","root","lchcl0655","TESTDB")
+db = pymysql.connect("localhost","root","lchcl0655","hhy_vip_video_db")
 cursor = db.cursor()
-print(cursor.fetchone())
+
+for li in li_content:
+     img_url = "https:"+li.img['src']
+     movie_title = li.a['title']
+     movie_desc = li.find('p', class_="site-piclist_info_describe").string
+     print(li.a['title'])
+     print(movie_title)
+     print(movie_desc)
+    # sql = "INSERT INTO hhy_vip_video(video_title,cover_img,video_desc,video_url)values('"+movie_title+"','"+img_url+"','"+movie_desc+"','"+movie_url+"');"
+    # print(sql)
+     #cursor.execute(sql)
+    # db.commit()
 db.close()
