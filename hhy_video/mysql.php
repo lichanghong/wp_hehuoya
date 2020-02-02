@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
 <html lang="zh-CN">
 <head>
+    <meta name="referrer" content="no-referrer" />
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/playerPopup.css">
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/gaze/uniqy/main/css/playMovie.08c08943.css">
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/barrage.2a919d2f.css">
