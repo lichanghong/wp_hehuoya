@@ -9,10 +9,10 @@
 
 </head>
 <body>
-    <div style="margin-top: 10px;margin-left: 10px">免费全网影视VIP视频！ 若播放异常，刷新</div>
-    <div style="margin-left: 10px">合伙呀视频</div>
+    <div style="margin-top: 30px;margin-left: 50px">免费全网影视VIP视频！ 若播放异常，刷新</div>
+    <div style="margin-left: 50px">合伙呀视频</div>
     <!-- 中部框架 -->
-    <div class="qy-mod-list qy-mod-list-wrap" style="margin-left: 50px;margin-bottom: 100px;margin-top: 100px">
+    <div class="qy-mod-list qy-mod-list-wrap" style="margin-left: 50px;margin-bottom: 10px;margin-top: 20px">
         <ul class="qy-mod-ul qy-mod-ul-collect">
             <!-- begin php -->
 <?php
@@ -87,8 +87,8 @@ $mysqli->close();
 
 
     </div>
-    <div>本站所有视频和图片均来自互联网，版权归原创者所有</div>
-    <div>本站视频源于互联网视频网站，系互联网抓取所得，仅供学习交流。
+    <div style="text-align: center;">本站所有视频和图片均来自互联网，版权归原创者所有</div>
+    <div style="margin-bottom: 100px;text-align: center;">本站视频源于互联网视频网站，系互联网抓取所得，仅供学习交流。
 </div>
 </body>
  
