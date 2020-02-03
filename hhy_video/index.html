@@ -1,72 +1,71 @@
-<!DOCTYPE HTML>
-<html lang="zh-CN">
 
 <head>
-	<link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/playerPopup.css">
+	<title>合伙呀视频</title>
 </head>
+<script src="https://s2.pstatp.com/cdn/expire-1-M/dplayer/1.25.0/DPlayer.min.js" type="application/javascript"></script>
+<link href="https://s0.pstatp.com/cdn/expire-1-M/dplayer/1.25.0/DPlayer.min.css" type="text/css" rel="stylesheet" />
+<script src="https://s0.pstatp.com/cdn/expire-1-M/hls.js/0.10.1/hls.min.js" type="application/javascript"></script>
 
-<body>
-	<!-- 中部框架 -->
-	<div class="qy-mod-list qy-mod-list-wrap qy-mod-list-vt">
-		<ul class="qy-mod-ul qy-mod-ul-collect">
-			<li class="qy-mod-li" index="1">
-				<div class="qy-mod-img vertical">
-					<div class="qy-mod-link-wrap">
-						<a href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_image1" title="灭绝：丧尸屠城" rseat="80521_like_image1" target="_blank" class="qy-mod-link">
-							<img rseat="80521_like_image1" src="https://pic2.iqiyipic.com/image/20190903/2a/50/v_109509036_m_601_m4_260_360.jpg" data-pb="c1=1" class="qy-mod-cover fadeOutIn-enter-active">
-							<div class="icon-tr">
-								<img src="https://pic0.iqiyipic.com/common/20171106/ac/1b/vip_100000_v_601_0_21.png" srcset="//pic0.iqiyipic.com/common/20171106/ac/1b/vip_100000_v_601_0_38.png 2x">
-							</div><!----><!----><!---->
-						</a>
-					</div>
-					<div title="灭绝：丧尸屠城" class="title-wrap">
-						<p class="main">
-							<a rseat="80521_like_title1" href="//www.iqiyi.com/v_19rrobodng.html?vfrm=pcw_playpage&amp;vfrmblk=G&amp;vfrmrst=80521_like_title1" title="灭绝：丧尸屠城" target="_blank" data-pb="c1=1" class="link-txt">灭绝：丧尸屠城
-							</a>
-						</p>
-						<p title="一路奔跑只为重生" class="sub">一路奔跑只为重生
-						</p>
-					</div>
-				</div><!---->
-			</li>
-		</ul>
+<style> 
+.div-relative{position:relative; } 
+/* css注释说明： 背景为红色 */ 
+.ads{ position:absolute; left:50px; top:60px; background:#FF0; width:90%; height:30%;display: none;} 
+.close{ position:absolute; background:red;height:30px;width:30px;left:5px; top:5px;font-size:12px} 
+
+/* 背景为黄色 */ 
+</style> 
+
+<div class="div-relative"> 
+<div id="dplayer"></div> 
+<div class="ads">我背景为黄色
+<div class="close">关闭</div> 
+</div> 
+</div> 
+
+<script type="text/javascript">
+    const dp = new DPlayer({
+    container: document.getElementById('dplayer'),
+    autoplay: true,
+    theme: '#FADFA3',
+    loop: false,
+    lang: 'zh-cn',
+    screenshot: true,
+    hotkey: true,
+    preload: 'auto',
+    logo: 'https://img.zcool.cn/community/0129b857fcf1a0a84a0d304f5bf818.jpg@1280w_1l_2o_100sh.jpg',
+    volume: 0.7,
+    mutex: true,
+    video: {
+        url: 'https://56.com-t-56.com/20190207/2888_0803b8c3/index.m3u8',
+        pic: 'https://img.zcool.cn/community/0129b857fcf1a0a84a0d304f5bf818.jpg@1280w_1l_2o_100sh.jpg',
+        thumbnails: 'https://img.zcool.cn/community/0129b857fcf1a0a84a0d304f5bf818.jpg@1280w_1l_2o_100sh.jpg',
+        type: 'auto',
+    },
+    contextmenu: [
+        {
+            text: '欢迎来到合伙呀视频',
+            link: 'https://hehuoya.com',
+        },
+        {
+            text: '支持我们请点击广告^_^',
+            click: (player) => {
+                window.location.href="https://hehuoya.com";
+            },
+        },
+    ],
+    
+});
+
+ //    dp.on('pause', function() {
+ //    	// window.location.href="https://hehuoya.com";
+ //    	if (dp.video.currentTime>60) {
+ //    		var x = document.getElementsByClassName("ads");
+	// 		x[0].innerHTML = "<h3>嘿，你好！点我（广告）可以让开发者有资本继续维护</h3>";
+	// 		x[0].style.display = "block";
+ //    	}
+	// });
+
+    dp.play();
 
 
-
-
-
-
-
-
-
-		<article id="1000000000730" class="qy-mod-li qy-g-wrap" style="display: none;">
-			<div class="qy-mod-img vertical">
-				<div class="qy-mod-link-wrap">
-					<a target="_blank" class="qy-mod-link">
-						<img class="qy-mod-cover fadeOutIn-enter-active">
-						<div class="icon-tr">
-	
-						</div><!---->
-					</a>
-				</div>
-				<div class="title-wrap">
-					<p class="main">
-						<a class="link-txt">
-							
-						</a>
-					</p>
-					<p class="sub">
-						
-					</p>
-				</div>
-			</div>
-		</article>
-	</div>
-</body>
-
-
-
-
-
-
-</html>
+</script>
