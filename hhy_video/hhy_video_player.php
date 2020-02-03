@@ -99,16 +99,10 @@ else {
             },
         },
     ],
-     //    dp.on('pause', function() {
- //    	// window.location.href="https://hehuoya.com";
- //    	if (dp.video.currentTime>60) {
- //    		var x = document.getElementsByClassName("ads");
-	// 		x[0].innerHTML = "<h3>嘿，你好！点我（广告）可以让开发者有资本继续维护</h3>";
-	// 		x[0].style.display = "block";
- //    	}
-	// });
-    dp.play();
-});
+ 
+		});
+	 	dp.play();
+
 	}
    
 
