@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
     <title>合伙呀影视大全 - Vip电影免费看</title>
-                 <meta name="referrer" content="no-referrer" />
+    <meta name="referrer" content="no-referrer" />
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/playerPopup.css">
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/gaze/uniqy/main/css/playMovie.08c08943.css">
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/barrage.2a919d2f.css">
@@ -18,7 +18,7 @@
             <!-- begin php -->
 <?php
 $mysql_conf = array(
-    'host'    => 'https://hehuoya.com',
+    'host'    => 'localhost',
     'db'      => 'hhy_vip_video_db',
     'db_user' => 'root',
     'db_pwd'  => 'lchcl0655',
