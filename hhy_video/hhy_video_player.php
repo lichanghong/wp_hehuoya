@@ -38,7 +38,7 @@ function endWith($haystack, $needle) {
       return (substr($haystack, -$length) === $needle);
  }
 
-if (endWith($url,"index.m3u8")) {	 
+if (endWith($url,"m3u8")) {	 
 echo '<div class="div-relative"> ';
 echo '<div id="dplayer"></div> ';
 echo '<div class="ads">';
@@ -68,7 +68,7 @@ else {
 }
 	var dplayer_element=document.getElementById('dplayer');
 	if (isNotNull(dplayer_element)) {
-		var url="<?php echo $url;?>"
+		var url="<?php echo $url;?>";
 		const dp = new DPlayer({
     container: document.getElementById('dplayer'),
     autoplay: true,
