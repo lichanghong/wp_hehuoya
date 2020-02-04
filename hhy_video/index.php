@@ -3,6 +3,7 @@
 <head>
     <title>合伙呀影视大全 - Vip电影免费看</title>
     <meta name="referrer" content="no-referrer" />
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/playerPopup.css">
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/gaze/uniqy/main/css/playMovie.08c08943.css">
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/barrage.2a919d2f.css">
@@ -90,13 +91,15 @@ $mysqli->close();
     </div>
     <div style="text-align: center;">本站所有视频和图片均来自互联网，版权归原创者所有</div>
     <div style="margin-bottom: 100px;text-align: center;">本站视频源于互联网视频网站，系互联网抓取所得，仅供学习交流。
+
+
 <div>关于合伙呀视频频道 </div>
 <div>合伙呀视频频道，网址：www.hehuoya.com。是一个公益性免费网站，主要提供全网视频VIP解析服务，我们不录制视频，也不储存视频，我们只是视频的搬运工。</div>
+</div>
 <ul>如何找到我们：</ul>
 <li>1、百度搜索《合伙呀》，请记准我们的域名再进行点击。其它冒牌的不是。</li>
 <li>2、直接在浏览器输入 hehuoya.com，按回车键即可。</li>
 <li>3、放入浏览器收藏夹，快捷键:ctrl + d 即可。手机访问，请在手机浏览器操作。</li>
-</div>
 </body>
  
 </html>

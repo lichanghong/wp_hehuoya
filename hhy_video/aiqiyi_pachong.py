@@ -27,29 +27,20 @@ soup_ccontent = bs4(html_content, 'html.parser')
 
 ul_content = soup_ccontent.find("ul", class_="site-piclist")
 li_content = ul_content.find_all("li")
-filename = 'video.sql'
+# filename = 'video.sql'
+
+import pymysql
+db = pymysql.connect("localhost","root","lchcl0655","hhy_vip_video_db")
+cursor = db.cursor()
 
 for li in li_content:
     img="https:"+li.img['src'];
     desc=li.find('p', class_="site-piclist_info_describe").string
     sql = "INSERT INTO hhy_vip_video(video_title,cover_img,video_desc,video_url)values ('"+li.a['title']+"','"+img+"','"+desc+"','"+li.a['href']+"');"
-    # with open(filename, 'a') as file_object:
-    #     file_object.write(sql+"\n")
-    print(sql)
+    cursor.execute(sql)
+    db.commit()
+    
+db.close()
+ 
 
-# import pymysql
-# db = pymysql.connect("localhost","root","lchcl0655","hhy_vip_video_db")
-# cursor = db.cursor()
-
-# for li in li_content:
-#      img_url = "https:"+li.img['src']
-#      movie_title = li.a['title']
-#      movie_desc = li.find('p', class_="site-piclist_info_describe").string
-     # print(li.a['title'])
-     # print(movie_title)
-     # print(movie_desc)
-     # sql = "INSERT INTO hhy_vip_video(video_title,cover_img,video_desc,video_url)values('"+movie_title+"','"+img_url+"','"+movie_desc+"','"+movie_url+"');"
-     # print(sql)
-#      #cursor.execute(sql)
-#     # db.commit()
-# db.close()
+ 
