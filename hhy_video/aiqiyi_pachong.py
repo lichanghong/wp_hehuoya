@@ -13,6 +13,9 @@ from bs4 import BeautifulSoup as bs4
 
 import urllib3
 import requests
+import sys
+import codecs
+sys.stdout = codecs.getwriter("utf-8")(sys.stdout.detach())
 
 requests.packages.urllib3.disable_warnings()
 http = urllib3.PoolManager()
