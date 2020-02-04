@@ -7,11 +7,13 @@
 body,html {margin:0; height:100%;}
 </style>
 <script data-ad-client="ca-pub-6387872276467622" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-
-</head>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 <script src="https://s2.pstatp.com/cdn/expire-1-M/dplayer/1.25.0/DPlayer.min.js" type="application/javascript"></script>
 <link href="https://s0.pstatp.com/cdn/expire-1-M/dplayer/1.25.0/DPlayer.min.css" type="text/css" rel="stylesheet" />
 <script src="https://s0.pstatp.com/cdn/expire-1-M/hls.js/0.10.1/hls.min.js" type="application/javascript"></script>
+
+</head>
+
 
 <style> 
 .div-relative{position:relative; } 
