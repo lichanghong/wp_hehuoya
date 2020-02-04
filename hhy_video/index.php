@@ -3,8 +3,6 @@
 <head>
     <title>合伙呀影视大全 - Vip电影免费看</title>
     <meta name="referrer" content="no-referrer" />
-    <meta name="viewport" content="width=device-width, user-scalable=yes, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/playerPopup.css">
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/gaze/uniqy/main/css/playMovie.08c08943.css">
     <link type="text/css" rel="stylesheet" href="https://stc.iqiyipic.com/css/uniqy/main/barrage.2a919d2f.css">
