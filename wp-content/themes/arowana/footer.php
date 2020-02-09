@@ -16,6 +16,16 @@
 	$copyright_content = get_theme_mod('copyright_content');
 	$hide_show_scroller = get_theme_mod('hide_show_scroller','1');
 ?>
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+<ins class="adsbygoogle"
+     style="display:block; text-align:center;"
+     data-ad-layout="in-article"
+     data-ad-format="fluid"
+     data-ad-client="ca-pub-6387872276467622"
+     data-ad-slot="5175722718"></ins>
+<script>
+     (adsbygoogle = window.adsbygoogle || []).push({});
+</script>
 
 <section id="footer-copyright">
 	<div class="container">
