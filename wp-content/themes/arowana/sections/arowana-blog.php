@@ -15,9 +15,7 @@
 					<?php if($startkit_blog_title) { ?>
 						<h2><?php echo esc_html($startkit_blog_title); ?></h2>
 					<?php } ?>
-					<?php if($blog_description) { ?>
-						<p class="wow fadeInUp" data-wow-delay="0.1s"><?php echo esc_html($blog_description); ?></p>
-					<?php } ?>
+					
 				</div>
 			</div>
 		</div>
