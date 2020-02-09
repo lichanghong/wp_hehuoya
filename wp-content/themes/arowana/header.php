@@ -2,7 +2,6 @@
 <html <?php language_attributes(); ?>>
 	<head>
 <meta name="referrer" content="no-referrer" />
-			<script data-ad-client="ca-pub-6387872276467622" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
