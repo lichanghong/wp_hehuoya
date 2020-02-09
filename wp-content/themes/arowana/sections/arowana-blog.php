@@ -42,7 +42,7 @@
 									<a href="<?php esc_url(the_permalink()); ?>"><i class="fa fa-link"></i></a>
 								</div>
 							</div>
-							<div class="post-content">
+							<div class="post-content" style="height: 200px;overflow: hidden;">
 								<?php     
 									if ( is_single() ) :
 										the_title('<h4 class="post-title">', '</h4>' );
@@ -51,7 +51,7 @@
 									endif; 
 								?> 
 								<?php 
-									widget_text_content( 
+									the_content( 
 										sprintf( 
 											__( 'Read More', 'arowana' ), 
 											'<span class="screen-reader-text">  '.esc_html(get_the_title()).'</span>' 
