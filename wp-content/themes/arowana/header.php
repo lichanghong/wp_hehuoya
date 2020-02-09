@@ -9,7 +9,6 @@
 	<?php endif; ?>
 
 	<?php wp_head(); ?>
-	<script data-ad-client="ca-pub-6387872276467622" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 </head>
 	
 
