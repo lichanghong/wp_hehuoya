@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>合伙呀</title>
+<meta name="description" content="知识共享合伙呀" />
+<meta name="keywords" content="合伙呀" /> 
+</head>
+
+<body id="index">
+ 
+<script type="text/javascript">
+	function IsPC() {
+	    var userAgentInfo = navigator.userAgent;
+	    var Agents = ["Android", "iPhone","SymbianOS", "Windows Phone","iPad", "iPod"];
+	    var flag = true;
+	    for (var v = 0; v < Agents.length; v++) {
+	        if (userAgentInfo.indexOf(Agents[v]) > 0) {
+	            flag = false;
+	            break;
+	        }
+	    }
+	    return flag;
+	}
+	if (!IsPC()) {
+		window.location.href = "/m.html";
+	}
+	else {
+		window.location.href = "/main.html";
+	}
+ 
+    // 2020-03-13 add end
+</script>
+</body>
+</html>

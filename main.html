@@ -1,0 +1,637 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>合伙呀</title>
+<meta name="description" content="知识共享合伙呀" />
+<meta name="keywords" content="合伙呀" />
+<link rel="shortcut icon" href="./icon.png" />
+<link rel="canonical" href="https://www.hehuoya.com" />
+<link rel="alternate" media="only screen and(max-width: 640px)" href="https://www.hehuoya.com/" >
+<link rel="stylesheet" type="text/css" href="./home_assert/global.css">
+<base href="https://m.hehuoya.com" />
+
+
+<style>
+		.popupd {
+			display: none;
+			width: 100%;
+			height: 100%;
+			position: fixed;
+			left: 0;
+			top: 0;
+			background: url(https://d-image.i4.cn/i4web/static2017/img/00000050.png) repeat;
+			z-index: 10
+		}
+
+		.popupd>.box {
+			width: 426px;
+			height: 321px;
+			padding: 31px 40px 70px 50px;
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin-left: -213px;
+			margin-top: -160.5px;
+			background: #FFF;
+			border-radius: 6px;
+			box-sizing: border-box;
+		}
+
+		.popupd>.box>h3 {
+			text-align: center;
+			font-size: 18px;
+			font-weight: bold;
+			line-height: 18px;
+			color: #333;
+			margin-bottom: 22px;
+		}
+
+		.popupd>.box>p {
+			font-size: 16px;
+			line-height: 24px;
+			margin-bottom: 25px;
+		}
+
+		.popupd>.box .downBtns {
+			text-align: center;
+		}
+
+		.popupd>.box .downBtns>.install {
+			display: inline-block;
+			width: 300px;
+			height: 50px;
+			text-align: center;
+			border: 1px solid #007BFF;
+			background: #007BFF;
+			color: #fff;
+			line-height: 50px;
+			font-size: 14px;
+			border-radius: 3px;
+			margin-bottom: 12px;
+		}
+
+		.popupd>.box .downBtns>.popupd_close ,.popupd>.box .downBtns>.popupd_close_down{
+			display: inline-block;
+			width: 300px;
+			height: 50px;
+			text-align: center;
+			border: 1px solid #ccc;
+			background: #fff;
+			color: #666;
+			line-height: 50px;
+			font-size: 14px;
+			border-radius: 3px;
+		}
+
+		.popupd>.box>.small_close {
+			width: 22px;
+			height: 22px;
+			position: absolute;
+			right: 15px;
+			top: 15px;
+			display: block;
+			background: url(https://d-image.i4.cn/i4web/static2017/img/btnsys_close.png) no-repeat left top;
+		}
+
+		.download_pc>.box>.small_close:active {
+			background-position: left -44px;
+		}
+		.mac-titles {
+			width: 179px;
+			height: 44px;
+			/*background: url('../img/mac-titles.png') no-repeat;*/
+			background: url(https://d-image.i4.cn/i4web/static2017/img/mac-titles.png) no-repeat;
+			position: absolute;
+			right: 222px;
+			bottom: 146px;
+			z-index: 10;
+			color: #fff;
+			padding-left: 16px;
+			padding-top: 3px;
+			line-height: 18px;
+			overflow: hidden;
+			box-sizing: border-box;
+			transition: opacity 0.7s, right 0.3s;
+			opacity: 0;
+		}
+
+		.mac-titles-two {
+			width: 179px;
+			height: 44px;
+			/*background: url('../img/mac-titles.png') no-repeat;*/
+			background: url(https://d-image.i4.cn/i4web/static2017/img/mac-titles.png) no-repeat;
+			position: absolute;
+			right: -134px;
+			bottom: 38px;
+			z-index: 10;
+			color: #fff;
+			padding-left: 16px;
+			padding-top: 3px;
+			line-height: 18px;
+			overflow: hidden;
+			box-sizing: border-box;
+			transition: opacity 0.7s, right 0.3s;
+			opacity: 0;
+		}
+		
+		/* 2020-03-13 add start*/
+		.macPopup {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            z-index: 10;
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.5);
+            z-index: 20;
+            display: none;
+        }
+
+        .macPopup>.mac_wrap {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 620px;
+            height: 662px;
+            border-radius: 6px;
+            background: rgba(255, 255, 255, 1);
+            z-index: 30;
+            overflow: hidden;
+            padding: 0 46px;
+            box-sizing: border-box;
+        }
+
+        .macPopup>.mac_wrap>h3 {
+            padding-top: 32px;
+            font-size: 18px;
+            font-family: Microsoft YaHei;
+            font-weight: bold;
+            color: rgba(51, 51, 51, 1);
+            text-align: center;
+            line-height: 18px;
+        }
+
+        .macPopup>.mac_wrap>.m_course {
+            padding: 32px 0 16px 0;
+            font-size: 0;
+        }
+
+        .macPopup>.mac_wrap>.m_course>span {
+            font-size: 16px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 16px;
+        }
+
+        .macPopup>.mac_wrap>.m_course>a {
+            font-size: 16px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            text-decoration: underline;
+            color: rgba(0, 123, 255, 1);
+            line-height: 16px;
+        }
+
+
+
+        .macPopup>.mac_wrap>p {
+            font-size: 16px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: rgba(51, 51, 51, 1);
+            line-height: 16px;
+            margin-top: 10px;
+        }
+
+
+        .m_closex {
+            width: 22px;
+            height: 22px;
+            position: absolute;
+            right: 15px;
+            top: 15px;
+            cursor: pointer;
+            background: url(https://d-image.i4.cn/i4web/static2017/img/btnsys_close.png) no-repeat left top;
+        }
+
+        .m_download {
+            width: 302px;
+            height: 52px;
+            background: #ccc;
+            border-radius: 3px;
+            font-size: 14px;
+            font-family: Microsoft YaHei;
+            font-weight: 400;
+            color: rgba(255, 255, 255, 1);
+            line-height: 52px;
+            text-align: center;
+            margin-top: 25px;
+            margin: 25px auto auto auto;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .mobile-version img:nth-child(1) {
+            width: 413px;
+            height: 191px;
+        }
+
+        .mobile-version img:nth-child(2) {
+            width: 413px;
+            height: 92px;
+        }
+
+        .ios-version img:nth-child(1) {
+            width: 413px;
+            height: 191px;
+        }
+
+        .ios-version img:nth-child(2) {
+            width: 413px;
+            height: 92px;
+        }
+
+        .pc-version img:nth-child(1) {
+            width: 413px;
+            height: 191px;
+        }
+
+        .pc-version img:nth-child(2) {
+            width: 413px;
+            height: 92px;
+        }
+
+        .details-video {
+            position: relative;
+        }
+
+        .macPopup>.mac_wrap video {
+            object-fit: fill;
+            width: 528px;
+            height: 360px;
+        }
+
+        .playBt {
+            width: 90px;
+            height: 90px;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 10;
+        }
+
+        .details-video .playBt.play {
+            background: url(https://d-image.i4.cn/i4web/static2017/img/videoImg.png) no-repeat;
+        }
+
+        .details-video .playBt.pause {
+            background: url(https://d-image.i4.cn/i4web/static2017/img/pauseImg.png) no-repeat;
+        }
+
+        .playStatus {
+            height: 20px;
+            line-height: 20px;
+            font-size: 14px;
+            color: #fff;
+            position: absolute;
+            bottom: 40px;
+            left: 0;
+            right: 0;
+            text-align: center;
+        }
+
+        .strTime {
+            float: left;
+            font-size: 16px;
+            user-select: none;
+
+        }
+
+        .progress {
+            width: 380px;
+            height: 4px;
+            margin: 8px 14px;
+            background: #b4b5ba;
+            position: relative;
+            cursor: pointer;
+            float: left;
+        }
+
+        .current {
+            background: #5192fd;
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 11;
+        }
+
+        .endTime {
+            float: left;
+            font-size: 16px;
+            user-select: none;
+        }
+
+        .progress span {
+            width: 20px;
+            height: 20px;
+            margin-top: -10px;
+            margin-left: -10px;
+            background: url(https://d-image.i4.cn/i4web/static2017/img/playDot.png)no-repeat;
+            position: absolute;
+            left: 0;
+            top: 50%;
+        }
+
+        .wrap_vTime {
+            display: inline-block;
+        }
+
+        /*2020-03-16 product-download  end*/
+	</style>
+
+</head>
+
+<body id="index">
+
+<!-- header start -->
+<div class="header_wrap" style="background: transparent;">
+	<header class="header">
+		<a href="/" title="知识共享合伙呀" class="logo"><img src="./home_assert/head_logo.png" width="164" height="46" alt="知识共享合伙呀"/></a>
+		<nav>
+			<a href="/" title="首页" id="nav_index">首页</a>
+			<a href="/hhy_video/index.php" target="_blank" title="视频免费看" id="nav_pros">视频免费看</a>
+			<a href="/?page_id=92" title="新闻" target="_blank"  id="nav_article">关于我们</a>
+<!-- 			<a href="https://developer.i4.cn" target="_blank" title="开发者平台">开发者平台</a>
+ -->		</nav>
+	</header>
+</div>
+<!-- header end -->
+ 
+<!-- product-download start-->
+
+	<div class="home-version version-info">
+		<div class="item pc-version">
+			<img src="./home_assert/pc_banner.jpg" alt="" title="">
+			<img class="pc-open" src="./home_assert/index_pc_text.jpg" alt="" title="">
+			<div class="item-info">
+				<ul class="info-present">
+					<li>iOS架构经验分享 </li>
+					<li>iOS底层深入剖析</li>
+					<li>iOS知识点碎片化整理学习</li>
+					<li>iOS前沿技术探索</li>
+					<li>iOS面试经验分享</li>
+					<li>iOS组件化方案</li>
+					<li>iOS优化方案</li>
+				</ul>
+				<!-- <a href="http://url.i4.cn/faIfqyaa" onclick="downStart('7', 'V7.98.17');" class="version-box windows-version" id="install1" data-agl-cvt ="6">
+				
+				</a> -->
+				
+				<!-- <a href="javascript:;" class="version-box mac-version mac-title-show downloadPopup" id="install2" data-agl-cvt ="6"></a>
+				<div class="mac-titles-two">
+					OS X Catalina 10.15或以上
+					系统，安装后请使用右键打开
+				</div> -->
+			</div>
+		</div>
+		<div class="item mobile-version">
+			<img src="./home_assert/mac_banner.jpg" alt="" title="">
+			<img src="./home_assert/index_mac_text.jpg" class="python-open" alt="python全栈&少儿编程" title="python全栈&少儿编程">
+			<div class="item-info">
+				<ul class="info-present">
+					<li>python自动化，让你的工作如鱼得水</li>
+			<li>python爬虫开发，数据成为无限可能</li>
+			<li>python少儿编程，趣味编程开发智力</li>
+			<li>python人工智能，热门不再神秘</li>
+			<li>python全栈开发，一个人搞定一个公司！</li>
+				</ul>
+			<!-- 	<a href="javascript:;" class="version-box windows-version experience_p">
+					谁几把体验>
+				</a> -->
+			</div>
+		</div>
+		<div class="item ios-version">
+			<img src="./home_assert/ios_banner.jpg" alt="" title="">
+			<img class="ios-open" src="./home_assert/index_ios_text.jpg" alt="" title="">
+			<div class="item-info">
+					<ul class="info-present">
+						<li>shell脚本开发基础，常见命令不可不知</li>
+<li>shell脚本让你的工作自动化</li>
+<li>你不会脚本怎么成为高级开发</li>
+<li>shell在mac上的应用</li>
+<li>有cocoapod、homebrew等工具</li>
+					</ul>
+					<!-- <a href="pro_ios.html" class="version-box ios-version">
+						立即体验>
+					</a> -->
+			</div>
+		</div>
+
+	</div>
+	<!-- product-download end--> 
+
+<!-- apps start -->
+<!-- <article class="board">
+    <div class="board_apps_l">
+    	<section class="board_apps_news">
+        	<h2>好玩的游戏 <a href="news_39_1.html" title="更多热点">更多</a></h2>
+        	<div class="board_apps_news_top">
+            
+        		<div>
+                    <a href="news_detail_42593.html" title="爱思游报第76期：卧薪尝胆之艾斯内战，LOL选手小乐言深陷网暴风波。" target="_blank">
+						<img src="https://d-image.i4.cn/i4web/image/news/2020-07-17/1594977028473.jpg" width="140" height="105" alt=""/>
+						<img src="https://d-image.i4.cn/i4web/static2017/img/news_img_border_140_105.png" width="140" height="105" />
+					</a>
+                    <h3><a title="爱思游报第76期：卧薪尝胆之艾斯内战，LOL选手小乐言深陷网暴风波。" href="news_detail_42593.html" target="_blank">爱思游报第76期：卧薪尝胆之艾斯内战，LOL选手小乐言深陷网暴风波。</a></h3>
+                    <p>爱思游报第76期：卧薪尝胆之艾斯内战，LOL选手小乐言深陷网暴风波。</p>
+                </div>
+       		
+        		<div>
+                    <a href="news_detail_42590.html" title="以游戏演绎东方美学，原创解谜游戏《画境长恨歌》登陆国内各大应用市场" target="_blank">
+						<img src="https://d-image.i4.cn/i4web/image/news/2020-07-17/1594965224172.jpg" width="140" height="105" alt=""/>
+						<img src="https://d-image.i4.cn/i4web/static2017/img/news_img_border_140_105.png" width="140" height="105" />
+					</a>
+                    <h3><a title="以游戏演绎东方美学，原创解谜游戏《画境长恨歌》登陆国内各大应用市场" href="news_detail_42590.html" target="_blank">以游戏演绎东方美学，原创解谜游戏《画境长恨歌》登陆国内各大应用市场</a></h3>
+                    <p>以游戏演绎东方美学，原创解谜游戏《画境长恨歌》登陆国内各大应用市场</p>
+                </div>
+            </div>
+            <div class="board_apps_news_top">
+            
+        		<div>
+                    <a href="news_detail_42593.html" title="爱思游报第76期：卧薪尝胆之艾斯内战，LOL选手小乐言深陷网暴风波。" target="_blank">
+						<img src="https://d-image.i4.cn/i4web/image/news/2020-07-17/1594977028473.jpg" width="140" height="105" alt=""/>
+						<img src="https://d-image.i4.cn/i4web/static2017/img/news_img_border_140_105.png" width="140" height="105" />
+					</a>
+                    <h3><a title="爱思游报第76期：卧薪尝胆之艾斯内战，LOL选手小乐言深陷网暴风波。" href="news_detail_42593.html" target="_blank">爱思游报第76期：卧薪尝胆之艾斯内战，LOL选手小乐言深陷网暴风波。</a></h3>
+                    <p>爱思游报第76期：卧薪尝胆之艾斯内战，LOL选手小乐言深陷网暴风波。</p>
+                </div>
+       		
+        		<div>
+                    <a href="news_detail_42590.html" title="以游戏演绎东方美学，原创解谜游戏《画境长恨歌》登陆国内各大应用市场" target="_blank">
+						<img src="https://d-image.i4.cn/i4web/image/news/2020-07-17/1594965224172.jpg" width="140" height="105" alt=""/>
+						<img src="https://d-image.i4.cn/i4web/static2017/img/news_img_border_140_105.png" width="140" height="105" />
+					</a>
+                    <h3><a title="以游戏演绎东方美学，原创解谜游戏《画境长恨歌》登陆国内各大应用市场" href="news_detail_42590.html" target="_blank">以游戏演绎东方美学，原创解谜游戏《画境长恨歌》登陆国内各大应用市场</a></h3>
+                    <p>以游戏演绎东方美学，原创解谜游戏《画境长恨歌》登陆国内各大应用市场</p>
+                </div>
+            </div>            
+        </section>
+    </div>
+ <aside class="board_apps_r ing">
+    	<h2>应用专题<a href="special_1_1_0_1.html" title="更多应用专题">更多专题</a></h2>
+    	
+    		<section>
+	        	<a href="special_app_1409_1_1_0_1.html" title="不怕同桌是学霸，就怕同桌过暑假！你的学习计划做好了吗？">
+					<img src="https://d-image.i4.cn/i4web/image/special/2020-07-17/1594979659595.png" width="260" height="143" alt="">
+					<img src="https://d-image.i4.cn/i4web/static2017/img/app_topic_border.png" width="260" height="143">
+				</a>
+	            <h3><a title="不怕同桌是学霸，就怕同桌过暑假！你的学习计划做好了吗？" href="special_app_1409_1_1_0_1.html">不怕同桌是学霸，就怕同桌过暑假！你的学习计划做好了吗？</a></h3>
+	            <p>共 14 款应用</p>
+	        </section>
+        
+    		<section>
+	        	<a href="special_app_1403_1_1_0_1.html" title="零基础 Vlog 入门指南，你也可以拍出超赞大片！">
+					<img src="https://d-image.i4.cn/i4web/image/special/2020-07-14/1594713394529.png" width="260" height="143" alt="">
+					<img src="https://d-image.i4.cn/i4web/static2017/img/app_topic_border.png" width="260" height="143">
+				</a>
+	            <h3><a title="零基础 Vlog 入门指南，你也可以拍出超赞大片！" href="special_app_1403_1_1_0_1.html">零基础 Vlog 入门指南，你也可以拍出超赞大片！</a></h3>
+	            <p>共 14 款应用</p>
+	        </section>
+        
+    		<section>
+	        	<a href="special_app_1399_1_1_0_1.html" title="叮~本月最佳APP出炉，快快尝鲜吧！">
+					<img src="https://d-image.i4.cn/i4web/image/special/2020-07-09/1594259847807.png" width="260" height="143" alt="">
+					<img src="https://d-image.i4.cn/i4web/static2017/img/app_topic_border.png" width="260" height="143">
+				</a>
+	            <h3><a title="叮~本月最佳APP出炉，快快尝鲜吧！" href="special_app_1399_1_1_0_1.html">叮~本月最佳APP出炉，快快尝鲜吧！</a></h3>
+	            <p>共 16 款应用</p>
+	        </section>
+        
+    </aside>
+</article> -->
+
+
+<div class="board_links">
+	<div class="content">
+		<p>友情链接：</p>
+		
+			<a href="http://www.feng.com/" title="威锋网" target="_blank">威锋网</a>
+				
+			<a href="http://www.17yy.com/" title="经典小游戏" target="_blank">经典小游戏</a>
+		
+			<a href="http://www.wishdown.com" title="心愿下载" target="_blank">心愿下载</a>
+		
+			<a href="https://www.hishop.com.cn" title="多用户商城系统" target="_blank">多用户商城系统</a>
+		 
+	</div>
+	<!-- <div class="btn more"></div> -->
+</div>
+  
+<!-- 2020-03-13 add end -->
+<script type="text/javascript" src="https://d-image.i4.cn/i4web/static2017/js/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="https://d-image.i4.cn/i4web/static2017/js/common.js?v=131"></script>
+<script type="text/javascript" src="https://d-image.i4.cn/i4web/static2017/js/index.js?v=131"></script>
+<!-- footer start -->
+
+
+
+<footer class="footer" style="background: transparent;">
+	 
+	<div class="footer_link">
+		<a href="/?page_id=92" rel="nofollow" title="合伙呀简介">合伙呀简介</a>
+        <!-- <a href="https://www.i4.cn/about.html#jobs" rel="nofollow" title="招聘信息">招聘</a> -->
+        <a href="https://www.jianshu.com/p/6be27ca3623d" rel="nofollow" title="问题反馈">评论反馈</a>
+        <!-- 2020-04-07 隐藏
+        <a href="https://www.i4.cn/hezuo.html" title="商务合作">商务合作</a>
+        -->
+        <a href="/?page_id=92" rel="nofollow" title="联系我们">联系我们</a>
+    </div>
+   
+    <ul>
+    	<li>合伙呀是一知识共享平台，主要有iOS全方位的知识点分享、人工智能、python基础、少儿编程、前端后台等技术</li>
+    	<li>© 2018 hehuoya Technology Co., Ltd. All Rights Reserved.</li>
+    	<li>
+			<a title="粤公网安备 44030502000033号" target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=41148102000200" rel="nofollow">豫公网安备 41148102000200号</a>&nbsp;&nbsp;&nbsp;&nbsp;
+			<!-- 2020-03-12 <a title="粤ICP备09173600号-8"  href="http://www.miitbeian.gov.cn/" target="_blank" rel="nofollow">粤ICP备09173600号-8</a>&nbsp;&nbsp;&nbsp;&nbsp;-->
+		</li>
+		
+    </ul>
+</footer>
+ 
+ 
+<script type="text/javascript">
+    //点击跳转连接
+    function clickOpen(className,url) {
+        $(className).click(function () {
+            window.open(url);
+        })
+    }
+    // clickOpen('.ios-open','/pro_ios.html');
+    clickOpen('.pc-open','doc_ios/#/');
+    clickOpen('.python-open','doc_python/#/');
+
+    $(".to-experience").click(function () {
+        $(".popupd").show();
+    })
+
+    $(".popupd_close_down").click(function () {
+        // mac
+        if(navigator.userAgent.toLocaleLowerCase().indexOf('mac') > -1) {
+            var oFrm = document.createElement('iframe');
+            oFrm.style.height = '0px';
+            // oFrm.src = 'PCi4Tools://1';
+            document.body.appendChild(oFrm);
+            setTimeout(function() {
+                oFrm.remove();
+            }, 5000);
+            return;
+        }else{
+            //pc
+            // window.location = 'PCi4Tools://';
+        }
+        $(".popupd").hide();
+    })
+    $(".popupd_close").click(function () {
+        $(".popupd").hide();
+    })
+    $(".experience_p").click(function () {
+        $(".popupd").show();
+    })
+
+    $(".box-text>a").hover(function () {
+        $(".mac-titles").css({ opacity: 1, right: '232px' });
+    }, function () {
+        $(".mac-titles").css({ opacity: 0, right: '222px' });
+    });
+
+    $(".mac-title-show").hover(function () {
+        $(".mac-titles-two").css({ opacity: 1, right: '-134px' });
+    }, function () {
+        $(".mac-titles-two").css({ opacity: 0, right: '-144px' });
+    });
+    
+    // 2020-03-13 add start
+    var downloadsTime = null;
+    var videoNode = document.querySelector(".details-video video");
+
+    $(".downloadPopup").click(function () {
+        clearInterval(downloadsTime);
+        downloadsTime = null;
+        $(".macPopup").show();
+        $(".m_download").text('下载Mac版（10）');
+        $(".m_download").css("background", "#ccc");
+        $(".m_download").off("click");
+       
+    });
+	
+	
+    // 2020-03-13 add end
+</script>
+</body>
+</html>
